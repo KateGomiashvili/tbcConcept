@@ -1,0 +1,43 @@
+.awards-slider {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+.award-card {
+  min-width: 350px;
+  height: 100%;
+  margin-right: 30px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  flex-direction: column;
+  font-size: 14px;
+  text-decoration: none;
+  transition: border-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  display: flex;
+  gap: 24px;
+  padding: 28px;
+}
+.award-card:hover {
+  border-color: #eef1f1;
+  box-shadow: 0 36px 40px -15px rgba(12, 43, 67, 0.07);
+}
+.award-img {
+  width: 100%;
+  height: 52px;
+}
+.award-img > img {
+  height: 100%;
+  width: auto;
+}
+.award-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.award-info > h3 {
+  color: #141719;
+  font-size: 16px;
+  font-family: TBCXBold;
+}

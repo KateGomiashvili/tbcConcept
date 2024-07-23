@@ -1,0 +1,58 @@
+.get-app-wrapper {
+  width: 100%;
+  max-width: 1110px;
+  margin: auto;
+  padding: 60px 0px;
+}
+.get-app {
+  width: 100%;
+  background-color: #fff;
+  padding: 60px 0px;
+}
+.app-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 414px;
+  width: 100%;
+}
+.app-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.app-info h2 {
+  color: #141719;
+  margin-top: 0;
+  font-size: 24px;
+  font-family: TBCXBold;
+  margin-bottom: 24px;
+}
+.app-info p {
+  color: #555f62;
+  font-family: TBCXRegular;
+  font-size: 16px;
+  line-height: 1.7;
+}
+.app-img img {
+  width: auto;
+  height: 350px;
+}
+.links {
+  display: flex;
+  gap: 16px;
+}
+.links > div {
+  color: #fff;
+  border: 1px solid #e1e4e5;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px;
+  font-size: 12px;
+  font-family: TBCXBold;
+  line-height: 1.33;
+  text-decoration: none;
+  transition: background-position 0.25s ease-in-out;
+  display: flex;
+}

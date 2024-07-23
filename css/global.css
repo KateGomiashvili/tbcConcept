@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  color: #555f62;
+  background-color: #f9fafa;
+  font-family: TBCXRegular, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+.wrapper {
+  padding-top: 80px;
+  max-width: 1110px;
+  min-height: 100vh;
+  margin: auto;
+}
+main {
+  position: relative;
+  min-height: calc(100vh - 80px);
+  height: 100vh;
+}
+@font-face {
+  font-family: TbcXBold;
+  src: url("/assets/fonts/TBCXBold.6db5e61d.woff2");
+}
+@font-face {
+  font-family: TbcXMedium;
+  src: url("/assets/fonts/TBCXMedium.8ef1248a.woff2");
+}
+@font-face {
+  font-family: TbcXRegular;
+  src: url("/assets/fonts/TBCXRegular.dee156cc.woff2");
+}
+.no-underline {
+  text-decoration: none;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  transform-origin: center top;
+  transform: translate3d(0px, 0px, 0px);
+  height: 33px !important;
+  background: rgba(222, 222, 222, 0.75);
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: opacity 0.5s 0.5s ease-out;
+  transition: opacity 0.5s 0.5s ease-out;
+}
+::-webkit-scrollbar:hover {
+  width: 8px !important;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555f62;
+}
