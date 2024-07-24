@@ -2,7 +2,60 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
+  cursor: grab;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  transform: translate3d(0px 0px 0px);
+  scroll-snap-type: x mandatory;
+  padding-bottom: 38px;
+}
+.awards-slider-container {
+  width: 100%;
   overflow: hidden;
+  position: relative;
+}
+.awards-slider:active {
+  cursor: grabbing;
+}
+.awards-custom-scrollbar {
+  position: absolute;
+  height: 2px; /* Adjusted for better visibility */
+  bottom: 10px;
+  left: 0;
+  width: calc(100%-92px);
+  right: 92px;
+  background-color: #d1d5d6;
+}
+.awards-scrollbar-thumb {
+  height: 100%;
+  width: 300px; /* Adjusted for better visibility */
+  background-color: #182cc0;
+  border-radius: 1px;
+  transition: width 0.3s ease;
+  cursor: grab;
+  position: absolute;
+}
+.awards-scrollbar-thumb:active {
+  cursor: grabbing;
+}
+.awards-scrollbar-line {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 2px;
+  position: relative;
+}
+.awards-arrows {
+  display: flex;
+  gap: 16px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+}
+.awards-arrow-disabled {
+  fill: #d1d5d6; /* Grey color for disabled state */
 }
 .award-card {
   min-width: 350px;

@@ -37,7 +37,11 @@ header {
   font-family: TBCXRegular;
   font-size: 16px;
 }
-.header-menu > div {
+
+.header-dropdown {
+  height: 100%;
+  display: flex;
+  align-items: center;
   position: relative;
 }
 .header-buttons {
@@ -80,17 +84,22 @@ header {
   font-family: TBCXBold;
   font-size: 16px;
 }
-.hidden {
-  display: none !important;
-}
 .dropdown {
   display: flex;
   flex-direction: column;
   gap: 16px;
   position: absolute;
-  top: 80px;
+  top: 120px;
   left: 0;
   color: #141719;
   font-size: 14px;
   font-family: TBCXMedium;
+  display: none;
+}
+.header_dropdown-bg {
+  width: 100%;
+  min-height: 231px;
+  background-color: #fff;
+  border-top: 1px solid #eef1f1;
+  display: none;
 }
