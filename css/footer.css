@@ -1,6 +1,8 @@
 footer {
   width: 100%;
   background-color: #fff;
+  padding-left: 47px;
+  padding-right: 47px;
 }
 .footer-content {
   display: flex;
@@ -93,4 +95,31 @@ footer {
   display: flex;
   gap: 35px !important;
   cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    padding-top: 40px;
+  }
+  .footer-menu {
+    display: block;
+  }
+  .footer-menu > div {
+    border-bottom: 1px solid #555f62;
+    width: 100%;
+    padding: 36px 45px;
+  }
+  .footer-top {
+    padding: 36px 45px;
+    border-bottom: 1px solid #555f62;
+  }
+  .footer-menu h4 {
+    font-size: 24px;
+  }
+  .cite-info {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 32px;
+    font-size: 14px;
+  }
 }

@@ -9,6 +9,8 @@ header {
   bottom: auto;
   left: 0;
   right: 0;
+  padding-left: 47px;
+  padding-right: 47px;
 }
 .header-container {
   display: flex;

@@ -93,3 +93,12 @@
 #banner {
   background-image: url("/assets/images/nvmgsymp.3xqprivate\ banker.png");
 }
+
+@media screen and (max-width: 767px) {
+  .subscribe-button > div {
+    width: 100% !important;
+  }
+  .banner-content {
+    padding-left: 45px;
+  }
+}
