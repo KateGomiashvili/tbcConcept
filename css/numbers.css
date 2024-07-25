@@ -1,8 +1,12 @@
-.numbers {
-  display: flex;
+.numbers-section {
   width: 100%;
   gap: 30px;
   padding: 60px 0px;
+}
+.numbers {
+  display: flex;
+  gap: 30px;
+  width: 100%;
 }
 .data {
   width: 100%;
@@ -23,4 +27,9 @@
   color: #555f62;
   font-size: 16px;
   font-family: TBCXMedium;
+}
+@media screen and (max-width: 767px) {
+  .numbers {
+    flex-direction: column;
+  }
 }

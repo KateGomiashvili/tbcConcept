@@ -56,3 +56,15 @@
   transition: background-position 0.25s ease-in-out;
   display: flex;
 }
+
+@media screen and (max-width: 767px) {
+  .app-card {
+    flex-direction: column;
+  }
+  .links {
+    display: none;
+  }
+  .app-info > p {
+    display: none;
+  }
+}

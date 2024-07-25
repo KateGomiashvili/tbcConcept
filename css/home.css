@@ -102,3 +102,13 @@
     padding-left: 45px;
   }
 }
+@media screen and (max-width: 1400px) {
+  .messsage-text {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .message-text {
+    font-size: 28px;
+  }
+}
