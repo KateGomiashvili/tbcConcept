@@ -1,11 +1,17 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const offersSection = document.querySelector(".offers");
-  const offersSlider = document.querySelector(".offers-slider");
-  const scrollbarThumb = document.querySelector(".scrollbar-thumb");
-  const leftArrow = document.querySelector(".left-arrow");
-  const rightArrow = document.querySelector(".right-arrow");
-  const sliderContainer = document.querySelector(".offers-slider-container");
-  const scrollbarLine = document.querySelector(".custom-scrollbar");
+function initializeSlider(
+  sliderContainerSelector,
+  sliderSelector,
+  leftArrowSelector,
+  rightArrowSelector,
+  scrollbarSelector,
+  scrollbarThumbSelector
+) {
+  const sliderContainer = document.querySelector(sliderContainerSelector);
+  const slider = document.querySelector(sliderSelector);
+  const leftArrow = document.querySelector(leftArrowSelector);
+  const rightArrow = document.querySelector(rightArrowSelector);
+  const scrollbarLine = document.querySelector(scrollbarSelector);
+  const scrollbarThumb = document.querySelector(scrollbarThumbSelector);
 
   let isDragging = false;
   let startX;
@@ -13,31 +19,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function updateScrollbar() {
     const scrollPercent =
-      offersSlider.scrollLeft /
-      (offersSlider.scrollWidth - offersSlider.clientWidth);
+      slider.scrollLeft / (slider.scrollWidth - slider.clientWidth);
     scrollbarThumb.style.left =
       scrollPercent * (scrollbarLine.clientWidth - scrollbarThumb.clientWidth) +
       "px";
     checkArrows();
   }
+
   function checkArrows() {
-    if (offersSlider.scrollLeft === 0) {
+    if (slider.scrollLeft === 0) {
       leftArrow.classList.add("arrow-disabled");
     } else {
       leftArrow.classList.remove("arrow-disabled");
     }
 
-    if (
-      offersSlider.scrollLeft >=
-      offersSlider.scrollWidth - offersSlider.clientWidth
-    ) {
+    if (slider.scrollLeft > slider.scrollWidth - slider.clientWidth) {
       rightArrow.classList.add("arrow-disabled");
     } else {
       rightArrow.classList.remove("arrow-disabled");
     }
-    console.log("moved");
   }
-  offersSlider.addEventListener("scroll", updateScrollbar);
+
+  slider.addEventListener("scroll", updateScrollbar);
 
   scrollbarThumb.addEventListener("mousedown", function (event) {
     const initialX = event.clientX;
@@ -52,8 +55,9 @@ document.addEventListener("DOMContentLoaded", function () {
       scrollbarThumb.style.left = newLeft + "px";
       const scrollPercent =
         newLeft / (scrollbarLine.clientWidth - scrollbarThumb.clientWidth);
-      offersSlider.scrollLeft =
-        scrollPercent * (offersSlider.scrollWidth - offersSlider.clientWidth);
+      slider.scrollLeft =
+        scrollPercent * (slider.scrollWidth - slider.clientWidth);
+      checkArrows();
     }
 
     function onMouseUp() {
@@ -66,47 +70,69 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   leftArrow.addEventListener("click", function () {
-    offersSlider.scrollBy({
-      left: -offersSlider.clientWidth / 3,
+    slider.scrollBy({
+      left: -slider.clientWidth / 3,
       behavior: "smooth",
     });
   });
 
   rightArrow.addEventListener("click", function () {
-    offersSlider.scrollBy({
-      left: offersSlider.clientWidth / 3,
+    slider.scrollBy({
+      left: slider.clientWidth / 3,
       behavior: "smooth",
     });
   });
 
-  // Adding dragging functionality to the entire offers section
-  offersSection.addEventListener("mousedown", function (event) {
+  // Adding dragging functionality to the slider container
+  sliderContainer.addEventListener("mousedown", function (event) {
     isDragging = true;
-    startX = event.pageX - offersSection.offsetLeft;
-    scrollLeft = offersSlider.scrollLeft;
-    offersSection.style.cursor = "grabbing";
+    startX = event.pageX - sliderContainer.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+    sliderContainer.style.cursor = "grabbing";
     event.preventDefault();
   });
 
-  offersSection.addEventListener("mouseleave", function () {
+  sliderContainer.addEventListener("mouseleave", function () {
     isDragging = false;
-    offersSection.style.cursor = "grab";
+    sliderContainer.style.cursor = "grab";
   });
 
-  offersSection.addEventListener("mouseup", function () {
+  sliderContainer.addEventListener("mouseup", function () {
     isDragging = false;
-    offersSection.style.cursor = "grab";
+    sliderContainer.style.cursor = "grab";
   });
 
-  offersSection.addEventListener("mousemove", function (event) {
+  sliderContainer.addEventListener("mousemove", function (event) {
     if (!isDragging) return;
     event.preventDefault();
-    const x = event.pageX - offersSection.offsetLeft;
+    const x = event.pageX - sliderContainer.offsetLeft;
     const walk = (x - startX) * 3; // Scroll-fast
-    offersSlider.scrollLeft = scrollLeft - walk;
+    slider.scrollLeft = scrollLeft - walk;
     updateScrollbar();
   });
 
   updateScrollbar();
   checkArrows();
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Initialize the first slider
+  initializeSlider(
+    ".offers",
+    ".offers-slider",
+    ".left-arrow",
+    ".right-arrow",
+    ".custom-scrollbar",
+    ".scrollbar-thumb"
+  );
+
+  // Initialize another slider with different selectors
+  initializeSlider(
+    ".awards",
+    ".awards-slider",
+    ".awards-left-arrow",
+    ".awards-right-arrow",
+    ".awards-custom-scrollbar",
+    ".awards-scrollbar-thumb"
+  );
 });

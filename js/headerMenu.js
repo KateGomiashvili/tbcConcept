@@ -1,6 +1,9 @@
 let headerButtons = document.getElementsByClassName("dropdown");
 let whiteBackground = document.getElementById("white_background");
 let headerDropdown = document.getElementsByClassName("header-dropdown");
+let borderLine = document.getElementsByClassName("border-line");
+let digitalBank = document.querySelector("digital-bank");
+
 function dropdownFunction(element) {
   let activeMenu = document.getElementById(element);
 
@@ -20,6 +23,7 @@ function closeAllDropdowns() {
   for (let i = 0; i < headerButtons.length; i++) {
     headerButtons[i].style.display = "none";
   }
+
   whiteBackground.style.display = "none";
 }
 
@@ -29,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("click", function (event) {
     var isClickInside = false;
     var dropdowns = document.querySelectorAll(".header-dropdown");
-
     dropdowns.forEach(function (dropdown) {
       if (dropdown.contains(event.target)) {
         isClickInside = true;
