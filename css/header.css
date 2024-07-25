@@ -140,3 +140,37 @@ header {
   border-top: 1px solid #eef1f1;
   display: none;
 }
+.topnav {
+  width: 32px;
+  height: 32px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.topnav-line-1 {
+  width: 11px;
+  height: 2px;
+  background-color: #555f62;
+}
+.topnav-line-2 {
+  width: 20px;
+  height: 2px;
+  background-color: #555f62;
+}
+.topnav-line-3 {
+  width: 15px;
+  height: 2px;
+  background-color: #555f62;
+}
+@media screen and (max-width: 991px) {
+  .topnav {
+    display: flex;
+  }
+  .header-menu {
+    display: none;
+  }
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
