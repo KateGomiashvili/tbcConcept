@@ -16,10 +16,7 @@ body {
   min-height: 100vh;
   margin: auto;
 }
-.padding-global {
-  padding-left: 47px;
-  padding-right: 47px;
-}
+
 @media screen and (max-width: 991px) {
   .padding-global {
     padding-left: 45px;

@@ -16,7 +16,7 @@
   height: 376px;
   width: 100%;
   border-radius: 6px;
-  background-image: url("/assets/images/home-img.webp");
+  background-image: url("../assets/images/home-img.webp");
   background-size: cover;
   background-position: 0% 46%;
   display: flex;
@@ -91,7 +91,7 @@
   line-height: 1.5;
 }
 #banner {
-  background-image: url("/assets/images/nvmgsymp.3xqprivate\ banker.png");
+  background-image: url("../assets/images/nvmgsymp.3xqprivate\ banker.png");
 }
 
 @media screen and (max-width: 767px) {
