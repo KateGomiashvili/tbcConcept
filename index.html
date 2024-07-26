@@ -72,13 +72,14 @@
                         <img src="assets/images/lang.svg">
                         <p>ქარ</p>
                     </div>
-                    <div class="topnav">
+                    <div class="topnav" onclick="showMenu()">
                         <div class="topnav-line-1"></div>
                         <div class="topnav-line-2"></div>
                         <div class="topnav-line-3"></div>
                     </div>
                 </div>
             </div>
+
             <div class="header_dropdown-bg" id="white_background">
                 <div class="dropdown-container">
                     <div>
@@ -455,7 +456,42 @@
         </div>
     </section>
 
+
+    <div id="header-mobile-menu">
+
+        <div class="menu-headings" onclick="mobileDropdown(0)">
+            <div>პროდუქტები</div>
+            <div><img class="mobile-arrow" src="assets/images/topnav_arrow.svg"></div>
+        </div>
+        <div class="mobile-dropdown hidden" id="1">
+            <p>პროდუქტების მიმოხილვა</p>
+            <p>ნაკრები</p>
+            <p>პირადი ბანკირი</p>
+        </div>
+
+        <div class="menu-headings" onclick="mobileDropdown(1)">
+            <div>შეთავაზებები</div>
+            <div><img class="mobile-arrow" src="assets/images/topnav_arrow.svg"></div>
+        </div>
+        <div class="mobile-dropdown hidden" id="2">
+            <p>მიმოხილვა</p>
+            <p>შეთავაზებები</p>
+            <p>ღონისძიებები</p>
+        </div>
+
+
+        <div class="menu-headings" onclick="mobileDropdown(2)">
+            <div>კონცეპტის სივრცე</div>
+            <div><img class="mobile-arrow" src="assets/images/topnav_arrow.svg"></div>
+        </div>
+        <div class="mobile-dropdown hidden" id="3">
+            <p>მიმოხილვა</p>
+            <p>კაფე</p>
+            <p>ბიბლიოთეკა</p>
+            <p>კონცეპტ ფილიალები</p>
+        </div>
     </div>
+
 
 
     <footer>
