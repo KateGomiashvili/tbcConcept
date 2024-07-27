@@ -63,6 +63,13 @@ function closeAllDropdowns() {
   whiteBackground.style.display = "none";
 }
 
+function OpenLangList() {
+  document.querySelector(".lang-list").classList.add("showLang");
+}
+function CloseLangList() {
+  document.querySelector(".lang-list").classList.remove("showLang");
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   console.log("loadedfinally");
   // Event listener to close dropdowns when clicking outside

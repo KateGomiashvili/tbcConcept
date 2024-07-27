@@ -72,10 +72,16 @@
                         <img src="assets/images/arrow.svg">
                         <p>გამოიწერეთ ნაკრები</p>
                     </div>
-                    <div class="change-lang">
-                        <img src="assets/images/lang.svg">
-                        <p>ქარ</p>
+                    <div class="lang-dropdown" onmouseover="OpenLangList()" onmouseout="CloseLangList()">
+                        <div class="change-lang">
+                            <img src="assets/images/lang.svg">
+                            <p>ქარ</p>
+                        </div>
+                        <div class="lang-list">
+                            <div class="lang-item">Eng</div>
+                        </div>
                     </div>
+
                     <div class="topnav" onclick="showMenu()">
                         <div class="topnav-line-1"></div>
                         <div class="topnav-line-2"></div>
@@ -108,17 +114,16 @@
                             <div class="banner-inner">
                                 <h1> თიბისი კონცეპტი</h1>
                                 <p>პერსონალური საბანკო მომსახურება, მორგებული თქვენს საჭიროებებსა და ინტერესებზე</p>
-                                <a href="/" class="subscribe-button">
-                                    <div>
-                                        <div><img src="assets/images/white-arrow.svg"></div>
-                                        <p>გამოიწერეთ</p>
-                                    </div>
-                                </a>
+                                <div class="button" onclick="Subscribe()">
+                                    <div><img src="assets/images/white-arrow.svg"></div>
+                                    <p>გამოიწერეთ</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <script src="js/subscribe.js"></script>
         </section>
         <section class="big-message">
             <div class="padding-global">
@@ -358,7 +363,11 @@
     </section>
     <section class="products">
         <div class="padding-global">
+
             <div class="get-app-wrapper">
+                <div class="heading-wrapper">
+                    <h2>პროდუქტები</h2>
+                </div>
                 <div class="products-container">
                     <div>
                         <div class="product-img">
@@ -416,12 +425,10 @@
                             <div class="banner-inner">
                                 <h1>პირადი ბანკირი</h1>
                                 <p>თქვენი სანდო პარტნიორი ფინანსურ რჩევებსა და ოპერაციებში</p>
-                                <a href="/" class="subscribe-button">
-                                    <div>
-                                        <div><img src="assets/images/white-arrow.svg"></div>
-                                        <p>გაიგეთ მეტი</p>
-                                    </div>
-                                </a>
+                                <div class="button">
+                                    <div><img src="assets/images/white-arrow.svg"></div>
+                                    <p>გაიგეთ მეტი</p>
+                                </div>
                             </div>
                         </div>
                     </div>

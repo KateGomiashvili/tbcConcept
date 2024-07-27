@@ -75,6 +75,12 @@ header {
   font-size: 16px;
   color: #222222;
 }
+.header-menu p {
+  cursor: pointer;
+}
+.header-dropdown .dropdown > p:hover {
+  color: #182cc0;
+}
 #header-mobile-menu {
   display: none;
   width: 100%;
@@ -123,11 +129,15 @@ header {
   gap: 16px;
 }
 .search-button {
+  cursor: pointer;
   height: 40px;
   width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.search-button:hover {
+  opacity: 0.8;
 }
 .search-button > img {
   width: 24px;
@@ -144,13 +154,53 @@ header {
   font-size: 14px;
   font-family: TBCXBold;
   line-height: 1.4;
+  cursor: pointer;
 }
 .subscribe > p {
   margin-top: 2px;
+  transition: transform 0.6s ease-out;
+}
+.subscribe > p:hover {
+  color: #3295ce;
+}
+.subscribe > p:active {
+  color: #2778a7;
+}
+.showLang {
+  display: flex !important;
+}
+.lang-list {
+  position: absolute;
+  display: none;
+  width: 67px;
+  margin-top: 2px;
+  color: #141719;
+  background-color: #fff;
+  border: 1px solid #e1e4e5;
+  border-radius: 4px;
+  flex-direction: column;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-weight: 500;
+  box-shadow: 0 4px 6px 2px rgba(12, 43, 67, 0.05);
+}
+.lang-item {
+  text-align: center;
+  cursor: pointer;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  transition: background-color 0.25s ease-in-out;
 }
 .change-lang {
+  position: relative;
   padding: 0 8px;
   gap: 4px;
+  height: 36px;
+  transition: background-color 0.25s ease-in-out;
+  border-radius: 4px;
+}
+.change-lang:hover {
+  background-color: #eef1f1;
 }
 .change-lang > p {
   color: #555f62;
