@@ -16,7 +16,10 @@ body {
   min-height: 100vh;
   margin: auto;
 }
-
+.padding-global {
+  /* padding-left: 47px;
+  padding-right: 47px; */
+}
 @media screen and (max-width: 991px) {
   .padding-global {
     padding-left: 45px;
@@ -36,15 +39,15 @@ main {
 }
 @font-face {
   font-family: TbcXBold;
-  src: url("/assets/fonts/TBCXBold.6db5e61d.woff2");
+  src: url("../assets/fonts/TBCXBold.6db5e61d.woff2");
 }
 @font-face {
   font-family: TbcXMedium;
-  src: url("/assets/fonts/TBCXMedium.8ef1248a.woff2");
+  src: url("../assets/fonts/TBCXMedium.8ef1248a.woff2");
 }
 @font-face {
   font-family: TbcXRegular;
-  src: url("/assets/fonts/TBCXRegular.dee156cc.woff2");
+  src: url("../assets/fonts/TBCXRegular.dee156cc.woff2");
 }
 .no-underline {
   text-decoration: none;

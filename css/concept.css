@@ -19,15 +19,14 @@
   max-height: 542px;
   width: 100%;
 }
-.packages > div {
-  width: 100%;
-  overflow: hidden;
-}
+
 .digital-premium {
   display: flex;
   flex-direction: column;
   gap: 30px;
   min-height: 542px;
+  width: 100%;
+  overflow: hidden;
 }
 .digital,
 .premium {
@@ -46,19 +45,34 @@
   z-index: -1;
   top: 0;
   left: 0;
-  transition: 0.3ms ease-in-out;
+  transition: 0.5s ease-in-out !important;
   overflow: hidden;
 }
-.digital:hover,
-.premium:hover,
-.package-360:hover .digital > img,
-.premium > img,
-.package-360 > img {
+
+/* .premium img {
+  transition: transform 0.3s ease-in-out !important;
+} */
+/* .digital img {
+  transition: transform 0.3s ease-in-out !important;
+} */
+.premium:hover img,
+.digital:hover img,
+.package-360:hover img {
   transform: scale(1.025);
-  overflow: hidden !important;
-  border-radius: 8px !important;
+}
+/* .digital:hover img {
+  transform: scale(1.025);
+} */
+
+.package-360 > img {
+  object-fit: cover;
+  object-position: 93% 100% !important;
+  transition: transform 0.5s ease-in-out !important;
 }
 
+/* .package-360:hover img {
+  transform: scale(1.025);
+} */
 .package-360 {
   width: 100%;
   height: 100%;
@@ -68,10 +82,11 @@
   border-radius: 8px;
   overflow: hidden;
   position: relative;
+  display: flex;
+  flex-direction: column-reverse;
 }
 .package-360 > img {
   width: auto;
-  transform: translate(-20%);
   height: 100%;
   position: absolute;
   top: 0;
@@ -112,4 +127,27 @@
 }
 .button-text img {
   height: 16px;
+}
+@media screen and (max-width: 767px) {
+  .packages {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+  .digital-premium {
+    flex-direction: row;
+  }
+  .digital,
+  .premium,
+  .package-360 {
+    width: 280px;
+    height: 232px;
+    height: auto;
+    overflow: hidden;
+  }
+  .digital > img,
+  .premium > img,
+  .package-360 > img {
+    width: 100%;
+  }
 }
