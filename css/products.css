@@ -1,12 +1,13 @@
 .products {
   width: 100%;
+  padding-bottom: 40px;
 }
 .products-container {
   display: flex;
   justify-content: space-between;
 }
 .products-container > div {
-  width: 350px;
+  min-width: 350px;
   height: 408px;
   border: 1px solid #e1e4e5;
   border-radius: 8px;
@@ -16,6 +17,7 @@
   transition: box-shadow 0.4s ease-in-out, background-color 0.4s ease-in-out;
   display: flex;
   overflow: hidden;
+  margin-right: 30px;
 }
 .products-container > div:hover .product-img > img {
   transform: scale(1.025); /* Zoom in on hover */
@@ -47,4 +49,16 @@
   font-size: 14px;
   max-height: 95px;
   overflow: hidden;
+}
+@media screen and (max-width: 1440px) {
+  .products-container {
+    display: flex;
+    gap: 16px;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    cursor: grab;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+  }
 }

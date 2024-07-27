@@ -44,7 +44,7 @@
   position: relative;
 }
 .banner-inner {
-  max-width: 540px;
+  width: 540px;
   display: flex;
   flex-direction: column;
 }
@@ -98,21 +98,32 @@
 #banner {
   background-image: url("../assets/images/nvmgsymp.3xqprivate\ banker.png");
 }
-
-@media screen and (max-width: 767px) {
-  .subscribe-button > div {
-    width: 100% !important;
-  }
-  .banner-content {
-    padding-left: 45px;
-  }
-}
 @media screen and (max-width: 1400px) {
   .messsage-text {
     font-size: 32px;
   }
+  .banner-inner {
+    width: 450px;
+  }
+  .banner-inner > h1 {
+    font-size: 24px;
+  }
+  .banner-inner > p {
+    font-size: 14px;
+  }
 }
 @media screen and (max-width: 767px) {
+  .subscribe-button > div {
+    width: 100% !important;
+  }
+
+  .banner-content {
+    margin: auto;
+    margin-top: auto;
+  }
+  .button {
+    width: 100%;
+  }
   .message-text {
     font-size: 28px;
   }

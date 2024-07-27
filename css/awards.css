@@ -94,3 +94,11 @@
   font-size: 16px;
   font-family: TBCXBold;
 }
+@media screen and (max-width: 767px) {
+  .awards-arrows {
+    display: none;
+  }
+  .awards-custom-scrollbar {
+    width: 100%;
+  }
+}

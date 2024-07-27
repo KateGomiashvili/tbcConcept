@@ -339,3 +339,11 @@ header {
     height: 32px;
   }
 }
+@media screen and (max-width: 479px) {
+  header {
+    padding: 0px 15px;
+  }
+  .subscribe > p {
+    font-size: 12px;
+  }
+}

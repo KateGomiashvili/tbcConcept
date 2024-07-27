@@ -99,3 +99,11 @@
 .arrow-disabled {
   fill: #d1d5d6; /* Grey color for disabled state */
 }
+@media screen and (max-width: 767px) {
+  .arrows {
+    display: none;
+  }
+  .custom-scrollbar {
+    width: 100%;
+  }
+}
