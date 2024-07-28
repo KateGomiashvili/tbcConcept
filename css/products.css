@@ -62,3 +62,8 @@
     scroll-snap-type: x mandatory;
   }
 }
+@media screen and (max-width: 476px) {
+  .products-container > div {
+    min-width: 280px;
+  }
+}

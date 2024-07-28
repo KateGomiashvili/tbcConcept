@@ -93,3 +93,11 @@
     display: none;
   }
 }
+@media screen and (max-width: 476px) {
+  .app-info h2 {
+    font-size: 14px;
+  }
+  .get-app {
+    padding: 36px 0px;
+  }
+}

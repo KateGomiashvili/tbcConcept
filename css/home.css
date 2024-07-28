@@ -116,15 +116,39 @@
   .subscribe-button > div {
     width: 100% !important;
   }
-
+  .big-message {
+    padding-top: 40px;
+  }
   .banner-content {
     margin: auto;
-    margin-top: auto;
+    padding-left: 10%;
+  }
+  .banner-inner {
+    width: 86%;
   }
   .button {
     width: 100%;
   }
   .message-text {
     font-size: 28px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .banner-inner > h1 {
+    font-size: 16px;
+  }
+  .banner-inner > p {
+    font-size: 14px;
+  }
+  .banner {
+    background-position: center;
+  }
+}
+@media screen and (max-width: 476px) {
+  .message-text {
+    font-size: 24px;
+  }
+  .big-message {
+    padding: 36px 0px;
   }
 }

@@ -143,3 +143,8 @@ footer {
     font-size: 14px;
   }
 }
+@media screen and (max-width: 476px) {
+  .footer-menu h4 {
+    font-size: 16px;
+  }
+}

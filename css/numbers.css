@@ -33,3 +33,17 @@
     flex-direction: column;
   }
 }
+@media screen and (max-width: 476px) {
+  .count {
+    font-size: 36px;
+  }
+  .data {
+    padding: 24px;
+  }
+  .data > p {
+    font-size: 14px;
+  }
+  .numbers-section {
+    padding: 36px 0px;
+  }
+}

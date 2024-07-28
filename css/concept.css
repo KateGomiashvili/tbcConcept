@@ -170,4 +170,15 @@
     left: 0;
     overflow: hidden;
   }
+  .card-content h3 {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 476px) {
+  .heading-wrapper h2 {
+    font-size: 14px;
+  }
+  .became-concept {
+    padding: 36px 0px;
+  }
 }
