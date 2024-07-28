@@ -1,7 +1,7 @@
 
 
 პროექტის სტრუქტურა:
-
+```plaintext
 tbcConcept/
 ├── assets/
 │   ├── images/
