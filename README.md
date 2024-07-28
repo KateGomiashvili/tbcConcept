@@ -25,7 +25,7 @@ tbcConcept/
 │   └── subscribe.js
 ├── index.html
 └── README.md
-
+```
 გამოყენებული ტექნოლოგიები:
 
 html, css, javascript
