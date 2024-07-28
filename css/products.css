@@ -20,7 +20,7 @@
   margin-right: 30px;
 }
 .products-container > div:hover .product-img > img {
-  transform: scale(1.025); /* Zoom in on hover */
+  transform: scale(1.025);
 }
 .product-img {
   width: 100%;

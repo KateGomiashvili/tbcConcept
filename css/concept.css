@@ -52,20 +52,11 @@
   overflow: hidden;
 }
 
-/* .premium img {
-  transition: transform 0.3s ease-in-out !important;
-} */
-/* .digital img {
-  transition: transform 0.3s ease-in-out !important;
-} */
 .premium:hover img,
 .digital:hover img,
 .package-360:hover img {
   transform: scale(1.025);
 }
-/* .digital:hover img {
-  transform: scale(1.025);
-} */
 
 .package-360 > img {
   object-fit: cover;
@@ -73,9 +64,6 @@
   transition: transform 0.5s ease-in-out !important;
 }
 
-/* .package-360:hover img {
-  transform: scale(1.025);
-} */
 .package-360 {
   width: 100%;
   height: 100%;
@@ -96,12 +84,6 @@
   left: 0;
   z-index: -1;
 }
-/* .package-360:hover,
-  .digital:hover,
-  .premium:hover {
-    background-size: 165%;
-    background-repeat: no-repeat;
-    background-position: center; }*/
 
 .card-content {
   height: 100%;

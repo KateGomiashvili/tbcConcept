@@ -26,7 +26,7 @@
 }
 .custom-scrollbar {
   position: absolute;
-  height: 2px; /* Adjusted for better visibility */
+  height: 2px;
   bottom: 10px;
   left: 0;
   width: calc(100%-92px);
@@ -35,7 +35,7 @@
 }
 .scrollbar-thumb {
   height: 100%;
-  width: 300px; /* Adjusted for better visibility */
+  width: 300px;
   background-color: #182cc0;
   border-radius: 1px;
   transition: width 0.3s ease;
@@ -59,7 +59,7 @@
   transition: transform 0.3s ease-in-out;
 }
 .offer:hover img {
-  transform: scale(1.025); /* Zoom in on hover */
+  transform: scale(1.025);
 }
 .card-description {
   display: flex;
@@ -97,7 +97,7 @@
   z-index: 3;
 }
 .arrow-disabled {
-  fill: #d1d5d6; /* Grey color for disabled state */
+  fill: #d1d5d6;
 }
 @media screen and (max-width: 767px) {
   .arrows {

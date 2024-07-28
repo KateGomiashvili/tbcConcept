@@ -33,7 +33,7 @@ function initializeSlider(
       leftArrow.classList.remove("arrow-disabled");
     }
 
-    if (slider.scrollLeft > slider.scrollWidth - slider.clientWidth) {
+    if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
       rightArrow.classList.add("arrow-disabled");
     } else {
       rightArrow.classList.remove("arrow-disabled");
@@ -83,7 +83,6 @@ function initializeSlider(
     });
   });
 
-  // Adding dragging functionality to the slider container
   sliderContainer.addEventListener("mousedown", function (event) {
     isDragging = true;
     startX = event.pageX - sliderContainer.offsetLeft;
@@ -106,7 +105,7 @@ function initializeSlider(
     if (!isDragging) return;
     event.preventDefault();
     const x = event.pageX - sliderContainer.offsetLeft;
-    const walk = (x - startX) * 3; // Scroll-fast
+    const walk = (x - startX) * 3;
     slider.scrollLeft = scrollLeft - walk;
     updateScrollbar();
   });
@@ -116,7 +115,6 @@ function initializeSlider(
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Initialize the first slider
   initializeSlider(
     ".offers",
     ".offers-slider",
@@ -126,7 +124,6 @@ document.addEventListener("DOMContentLoaded", function () {
     ".scrollbar-thumb"
   );
 
-  // Initialize another slider with different selectors
   initializeSlider(
     ".awards",
     ".awards-slider",

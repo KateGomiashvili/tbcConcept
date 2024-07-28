@@ -20,7 +20,7 @@
 }
 .awards-custom-scrollbar {
   position: absolute;
-  height: 2px; /* Adjusted for better visibility */
+  height: 2px;
   bottom: 10px;
   left: 0;
   width: calc(100%-92px);
@@ -29,7 +29,7 @@
 }
 .awards-scrollbar-thumb {
   height: 100%;
-  width: 300px; /* Adjusted for better visibility */
+  width: 300px;
   background-color: #182cc0;
   border-radius: 1px;
   transition: width 0.3s ease;
@@ -55,7 +55,7 @@
   z-index: 3;
 }
 .awards-arrow-disabled {
-  fill: #d1d5d6; /* Grey color for disabled state */
+  fill: #d1d5d6;
 }
 .award-card {
   min-width: 350px;

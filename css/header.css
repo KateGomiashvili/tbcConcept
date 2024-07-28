@@ -308,9 +308,6 @@ header {
   }
 }
 @media screen and (max-width: 991px) {
-  /* header {
-    background-color: #f9fafa;
-  } */
   .topnav {
     display: flex;
     grid-row-gap: 5px;

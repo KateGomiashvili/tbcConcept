@@ -28,7 +28,7 @@
   font-size: 16px;
   font-family: TBCXMedium;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 772px) {
   .numbers {
     flex-direction: column;
   }
