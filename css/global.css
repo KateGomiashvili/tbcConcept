@@ -2,13 +2,22 @@
   box-sizing: border-box;
   margin: 0;
 }
+ 
 body {
+  overflow: hidden !important;
+  margin: 0;
   color: #555f62;
   background-color: #f9fafa;
   font-family: TBCXRegular, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.7;
+  overflow: -moz-scrollbars-none !important; /* For Firefox */
+  -ms-overflow-style: none !important;  /* For Internet Explorer and Edge */
+  scrollbar-width: none !important;  /* For Firefox */
+}
+body::-webkit-scrollbar {
+  display: none !important; /* For Chrome, Safari, and Opera */
 }
 .wrapper {
   padding-top: 80px;
@@ -78,32 +87,4 @@ main {
 @font-face {
   font-family: TbcXRegular;
   src: url("../assets/fonts/TBCXRegular.dee156cc.woff2");
-}
-.no-underline {
-  text-decoration: none;
-}
-::-webkit-scrollbar {
-  width: 0px;
-  transform-origin: center top;
-  transform: translate3d(0px, 0px, 0px);
-  height: 33px !important;
-  background: rgba(222, 222, 222, 0.75);
-  position: absolute;
-  opacity: 0;
-  z-index: 1;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-transition: opacity 0.5s 0.5s ease-out;
-  transition: opacity 0.5s 0.5s ease-out;
-}
-::-webkit-scrollbar:hover {
-  width: 8px !important;
-}
-::-webkit-scrollbar-thumb {
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #555f62;
 }

@@ -66,6 +66,18 @@
   flex-direction: column;
   gap: 16px;
   padding: 28px;
+  position: relative;
+}
+.offer-logo {
+  position: absolute;
+  width: 78px;
+  height: 56px;
+  background-color: #fff;
+  border-radius: 6px 0 0 6px;
+  overflow: hidden;
+  border: none;
+  right: 0;
+  top: -200px;
 }
 .categories {
   display: flex;

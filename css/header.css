@@ -61,6 +61,7 @@ header {
 }
 .logo {
   display: flex;
+  cursor: pointer;
   align-items: center;
 }
 .header-menu {
